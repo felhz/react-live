@@ -8,7 +8,7 @@ const Editor = ({ code, onChange }) => {
     if (editorRef.current) {
       const _editor = editor.create(editorRef.current, {
         value: code,
-        language: 'md',
+        language: 'mdx',
         theme: 'vs-dark',
       });
       //   _editor.onDidChangeModelContent(() => {
