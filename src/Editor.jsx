@@ -8,7 +8,7 @@ const Editor = ({ code, onChange }) => {
     if (editorRef.current) {
       const _editor = editor.create(editorRef.current, {
         value: code,
-        language: 'javascript',
+        language: 'md',
         theme: 'vs-dark',
       });
       //   _editor.onDidChangeModelContent(() => {
@@ -16,11 +16,11 @@ const Editor = ({ code, onChange }) => {
       //     onChange(value);
       //   });
       // 监听ctrl+s
-      document.addEventListener('keydown', (e) => {
-        if ((event.ctrlKey || event.metaKey) && e.key === 's') {
+      document.addEventListener('keydown', (event) => {
+        if ((event.ctrlKey || event.metaKey) && event.key === 's') {
           const value = _editor.getValue();
           onChange(value);
-          e.preventDefault();
+          event.preventDefault();
           console.log('ctrl+s');
         }
       });
