@@ -2,8 +2,10 @@ import { evaluateSync } from '@mdx-js/mdx';
 import * as Antd from 'antd';
 import { useEffect, useRef, useState } from 'react';
 import runTime from 'react/jsx-runtime';
+
 import Editor from '../Editor';
 import styles from './index.module.css';
+// const v = compileSync('import {name} from "../util/common.js"\n\n {name}');
 
 const files = import.meta.glob('/src/components/*.jsx');
 // console.log(await files['/src/components/index.jsx']());
